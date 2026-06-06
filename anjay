@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRI ❤️ RIZAL</title>
+    <style>
+        /* Mengimpor font romantis dan modern dari Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Latar belakang gradasi malam romantis (Deep Amethyst to Rose) */
+            background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+        }
+
+        /* Kontainer Utama Glassmorphism */
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 40px 50px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Wrapper untuk menyatukan SRI, LOVE, RIZAL secara horizontal */
+        .romantic-couple {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Gaya teks untuk nama SRI dan RIZAL */
+        .name {
+            font-family: 'Alex Brush', cursive;
+            font-size: 5.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff7
