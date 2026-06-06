@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Sri Pacare Rizal</title>
+    <style>
+        /* Mengimpor font romantis dari Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Latar belakang gradasi romantis */
+            background: linear-gradient(135deg, #ffe3e3 0%, #fbc2eb 50%, #a6c1ee 100%);
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Desain Teks Utama */
+        .romantic-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            font-weight: bold;
+            /* Efek warna teks emas mawar */
+            background: linear-gradient(45deg, #ff416c, #ff4b2b, #b06ab3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 20px rgba(255, 75, 92, 0.3);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            animation: pulse 3s infinite alternate;
+        }
+
+        /* Sub-teks pemanis */
+        .sub-text {
+            font-size: 1rem;
+            color: #6a11cb;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.8;
+        }
+
+        /* Animasi berdenyut lembut */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(255,65,108,0.2));
+            }
+            100% {
+                transform: scale(1.03);
+                filter: drop-shadow(0 0 15px rgba(255,65,108,0.6));
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efek dekorasi hati melayang */
+        .heart {
+            position: absolute;
+            color: rgba(255, 75, 108, 0.6);
+            font-size: 20px;
+            pointer-events: none;
+            animation: floatUp 6s linear infinite;
+            bottom: -20px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-105vh) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="romantic-text">Sri Pacare Rizal</h1>
+        <p class="sub-text">Selamanya & Selalu</p>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            
+            // Variasi bentuk hati atau simbol cinta
+            const hearts = ['❤️', '💖', '✨', '🌸'];
+            heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+            
+            // Mengatur posisi acak secara horizontal
+            heart.style.left = Math.random() * 100 + "vw";
+            
+            // Mengatur ukuran acak
+            heart.style.fontSize = Math.random() * 20 + 15 + "px";
+            
+            // Mengatur durasi animasi acak agar lebih alami
+            heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+            
+            document.body.appendChild(heart);
+            
+            // Menghapus elemen setelah animasi selesai agar browser tidak lemot
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        // Membuat hati baru setiap 400 milidetik
+        setInterval(createHeart, 400);
+    </script>
+</body>
+</html>
